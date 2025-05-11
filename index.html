@@ -14,7 +14,7 @@
     <header class="page-header">
    <div class="container header-container"> 
     <nav class="header-nav">
-    <a class="header-logo" href="/index.html">Web<span class="logo-part">Studio</span></a>
+    <a class="logo header-logo" href="/index.html">Web<span class="logo-part">Studio</span></a>
        <ul class="nav-list">
            <li class="nav-item"><a class="nav-link current" href="./index.html">Studio</a></li>
            <li class="nav-item"><a class="nav-link" href="">Portfolio</a></li>
@@ -27,16 +27,77 @@
    <li class="contacts-item"><a class="contacts-link" href="tel:+110001111111">+11 (000) 111-11-11</a></li>
 </ul>
 </address>
+<button class="burger-btn" type="button" data-menu-open>
+  <svg class="burger-icon" width="24" height="24">
+    <use href="./images/icons.svg#icon-burger"></use>
+  </svg>
+</button>
+</div>
+<div class="mobile-menu" id="mobile-menu">
+  <div class="container mobile-menu-container">
+    <button type="button" class="mobile-menu-close" data-menu-close>
+      <svg class="mobile-menu-close-icon" width="8" height="8">
+        <use href="./images/icons.svg#icon-close"></use>
+      </svg>
+    </button>
+  <nav class="mobile-menu-nav">
+    <ul class="mobile-menu-list">
+            <li><a href="./index.html" class="mobile-menu-link current" aria-current="page">Studio</a></li>
+        <li><a href="#" class="mobile-menu-link">Portfolio</a></li>
+        <li><a href="#" class="mobile-menu-link">Contacts</a></li>
+      </ul>
+    </nav> 
+     <div class="mobile-menu-contacts">
+      <address class="mobile-menu-address">
+        <ul class="mobile-menu-contacts-list">
+          <li><a href="mailto:info@devstudio.com" class="mobile-menu-contacts-link">info@devstudio.com</a></li>
+          <li><a href="tel:+110001111111" class="mobile-menu-contacts-link">+11 (000) 111-11-11</a></li>
+        </ul>
+      </address>
+    </div>
+<div class="mobile-menu-socials">
+      <ul class="mobile-menu-social-list">
+        <li>
+          <a href="#" class="mobile-menu-social-link">
+            <svg class="mobile-menu-social-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-instagram"></use>
+            </svg>
+          </a>
+        </li>
+        <li>
+          <a href="#" class="mobile-menu-social-link">
+            <svg class="social-icon" width="24" height="24">
+              <use href="./images/icons.svg#icon-twitter"></use>
+              </svg>
+                </a>
+        </li>
+        <li>
+          <a href="#" class="mobile-menu-social-link">
+            <svg class="social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-facebook"></use>
+                </svg>
+                  </a>
+       </li>
+        <li>
+          <a href="#" class="mobile-menu-social-link">
+              <svg class="social-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-linkedin"></use>
+                  </svg>
+                    </a>
+        </li>
+      </ul>
+   </div>
+</div>
 </div>
 </header>
     <main>        
-      <section class="section-main">
+      <section class="section-main hidden">
         <div class="main-container">
             <h1 class="main-title">Effective Solutions for Your Business</h1>
             <button class="main-button" type="button" data-modal-open>Order Service</button>
         </div>
     </section>
-        <section class="section-features">
+        <section class="section-features hidden">
           <div class="container">
               <h2 class="visually-hidden">Features</h2>
               <ul class="features-list">
@@ -79,7 +140,7 @@
               </ul>
           </div>
       </section>  
-            <section class="section-team">
+            <section class="section-team hidden">
                 <div class="container">
                     <h2 class="team-title">Our Team</h2>
                     <ul class="team-list">
@@ -234,7 +295,7 @@
                     </ul>
                 </div>       
         </section>
-        <section class="section-portfolio">
+        <section class="section-portfolio hidden">
           <div class="container container-portfolio">
               <h2 class="portfolio-main-title">Our Portfolio</h2>
               <ul class="portfolio-list">
@@ -302,7 +363,7 @@
           </div>
       </section>
     </main>
-    <footer class="page-footer">  
+    <footer class="page-footer hidden">  
       <div class="container footer-container">
           <div class="footer-content">
               <a class="footer-logo" href="/index.html">Web<span class="logo-part">Studio</span></a>
@@ -365,7 +426,7 @@
     </div>
 </div>
 </footer>
-<div class="backdrop is-hidden" data-modal>
+<div class="backdrop hidden" data-modal>
   <div class="modal">
     <button type="button" class="modal-close-btn" data-modal-close>
       <svg class="modal-close-icon" width="8" height="8">
@@ -449,5 +510,6 @@
 </div>
 
 <script src="./js/modal.js"></script>
+<script src="./js/mobile-menu.js"></script>
 </body>
 </html>
