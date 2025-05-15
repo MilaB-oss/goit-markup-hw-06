@@ -49,6 +49,7 @@ clip-path: inset(100%);
 clip: rect(0 0 0 0);
 overflow: hidden;
 }
+
 /*common*/
 .container {
 max-width: 320px;
@@ -129,6 +130,7 @@ gap: 40px;
 padding: 24px 0;
 margin-right: 120px;
 }
+
 .nav-link {
 display: block;
 padding: 24px 0;
@@ -137,8 +139,9 @@ font-size: 16px;
 line-height: 1.5;
 letter-spacing: 0.02em;
 color: #2E2F42;
-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 .nav-link.current {
 position: relative;
 }
@@ -206,6 +209,7 @@ letter-spacing: 0.02em;
 line-height: 1.5;
 }   
 }
+
 /*mobile menu*/
 .mobile-menu {
     position: fixed;
@@ -268,6 +272,7 @@ line-height: 1.5;
   flex-direction: column;
   gap: 40px;
   margin-bottom: 40px;
+  margin-top: 72px;
 }
 
 .mobile-menu-link {
@@ -337,6 +342,7 @@ display: none;
 }
 
 }
+
 /*main*/
 .section-main {
 background-image: 
