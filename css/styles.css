@@ -754,7 +754,8 @@ background-color: #404bbf;
   }
 }
 
-/* Base Mobile Styles */
+/*footer*/
+
 .page-footer {
   background-color: #2e2f42;
   padding: 96px 0;
@@ -776,6 +777,12 @@ background-color: #404bbf;
   text-align: center;
 }
 
+.footer-logo .logo-part {
+color: #f4f4fd;
+line-height: 1.17;
+letter-spacing: 0.02em;
+}
+
 .footer-middle {
   display: flex;
   flex-direction: column;
@@ -791,37 +798,52 @@ background-color: #404bbf;
   width: 100%;
 }
 
-/* Tablet (768px-1157px) */
+
 @media screen and (min-width: 768px) and (max-width: 1157px) {
   .footer-container {
     flex-direction: row;
     flex-wrap: wrap;
-    gap: 72px 24px;
+    row-gap: 72px;
+    column-gap: 24px;
+    padding-left: 108px;
     max-width: 584px;
   }
 
   .footer-content {
+  
+    width: 264px;
+    flex: 0 0 264px;
     align-items: flex-start;
     text-align: left;
-    width: calc(50% - 12px);
-    margin-right: 24px;
+    margin-left: 24px;
   }
 
   .footer-middle {
+    order: 1;
+    flex: 1;
+    min-width: 0;
     flex-direction: column;
     align-items: flex-start;
     gap: 16px;
-    width: calc(50% - 12px);
-    margin: 0;
+  }
+
+  .footer-social {
+    margin-right: 0;
   }
 
   .footer-form {
+    order: 3;
+    flex: 0 0 100%;
     align-items: flex-start;
-    width: 100%;
+  }
+
+  .subscribe-form {
+    flex-direction: row;
+    max-width: none;
   }
 }
 
-/* Desktop (1158px+) */
+
 @media screen and (min-width: 1158px) {
   .page-footer {
     padding: 100px 0;
@@ -832,30 +854,33 @@ background-color: #404bbf;
     flex-wrap: nowrap;
     align-items: baseline;
     gap: 0;
+    padding: 0 15px;
   }
 
   .footer-content {
-    align-items: flex-start;
     margin-right: 120px;
     flex: 0 0 auto;
+    align-items: flex-start;
   }
 
   .footer-middle {
-    flex-direction: column;
-    align-items: flex-start;
-    margin-right: 80px;
-    gap: 16px;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 80px;
     flex: 0 0 auto;
   }
 
+  .footer-social {
+    margin-right: 80px;
+  }
+
   .footer-form {
-    align-items: flex-start;
     flex: 0 0 453px;
     margin-left: auto;
+    align-items: flex-start;
   }
 }
 
-/* Common Elements Styles */
 .footer-logo {
   display: inline-block;
   margin-bottom: 16px;
@@ -869,7 +894,7 @@ background-color: #404bbf;
   text-decoration: none;
 }
 
-.footer-logo .logo-part {
+.footer-logo-part {
   color: #f4f4fd;
 }
 
@@ -936,14 +961,6 @@ background-color: #404bbf;
   flex-direction: column;
   gap: 16px;
   width: 100%;
-  max-width: 398px;
-}
-
-@media screen and (min-width: 768px) {
-  .subscribe-form {
-    flex-direction: row;
-    max-width: none;
-  }
 }
 
 .subscribe-input {
@@ -958,12 +975,6 @@ background-color: #404bbf;
   border: 1px solid #ffffff;
   border-radius: 4px;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-}
-
-@media screen and (min-width: 768px) {
-  .subscribe-input {
-    width: 264px;
-  }
 }
 
 .subscribe-input::placeholder {
@@ -998,6 +1009,17 @@ background-color: #404bbf;
 .subscribe-icon {
   margin-left: 16px;
   fill: currentColor;
+}
+
+@media screen and (min-width: 768px) {
+  .subscribe-form {
+    flex-direction: row;
+    max-width: none;
+  }
+  
+  .subscribe-input {
+    width: 264px;
+  }
 }
 
 /*modal*/
